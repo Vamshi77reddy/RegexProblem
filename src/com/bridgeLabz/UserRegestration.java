@@ -40,12 +40,17 @@ public class UserRegestration {
 	        else {
 	            System.out.println("Invalid");
 	        }
+	        System.out.print("Enter the Password:- ");
+	        String Password = sc.next();
 	        Pattern pattern6 = Pattern.compile("^[A-Za-z]{8,}$");
-	        Matcher matcher6 = pattern.matcher("mySecretPassword");
+	        Matcher matcher6 = pattern.matcher(Password);
 	        if (matcher.matches())
-	            System.out.println("valid password_rule1");
+	            System.out.println("valid password");
 	        else
-	            System.out.println("Invalid password)rule1"); 
+	            System.out.println("Invalid password)"); 
+	        System.out.println("Minimum 8 Characters");
+			System.out.println("Atleast 1 UpperCase");
+	        
 	    }
 	}
 
