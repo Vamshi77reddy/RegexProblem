@@ -9,12 +9,14 @@ public class UserRegestration {
 	        Scanner sc = new Scanner(System.in);
 	        System.out.print("Enter Fist name:- ");
 	        String name = sc.next();
-	        System.out.print("Enter Last name:- ");
-	        String lastname = sc.next();
+	        System.out.print("Enter Fist name:- ");
+	        String lastName = sc.next();
+	        
 	        Pattern pattern = Pattern.compile("^[A-Z][a-z]{3,}$");
 	        Matcher matcher = pattern.matcher(name);
-	        Matcher matcher1 = pattern.matcher(lastname);
-	        if (matcher.matches()&& matcher1.matches())
+	        Matcher matcher1 = pattern.matcher(lastName);
+
+	        if (matcher.matches() && matcher1.matches() )
 	            System.out.println("valid");
 	        else
 	            System.out.println("Invalid");
