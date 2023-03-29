@@ -32,7 +32,7 @@ public class UserRegestration {
 	        }
 	        System.out.print("Enter Mobile number:- ");
 	        String mobileNumber = sc.next();
-	        Pattern pattern4 = Pattern.compile("^(0/91)?[7-9][0-9]{9}$");
+	        Pattern pattern4 = Pattern.compile("^[7-9][0-9]{9}$");
 	        Matcher matcher4 = pattern4.matcher(mobileNumber);
 	        if(matcher4.matches()){
 	            System.out.println("valid");
@@ -40,6 +40,12 @@ public class UserRegestration {
 	        else {
 	            System.out.println("Invalid");
 	        }
+	        Pattern pattern6 = Pattern.compile("^[A-Za-z]{8,}$");
+	        Matcher matcher6 = pattern.matcher("mySecretPassword");
+	        if (matcher.matches())
+	            System.out.println("valid password_rule1");
+	        else
+	            System.out.println("Invalid password)rule1"); 
 	    }
 	}
 
