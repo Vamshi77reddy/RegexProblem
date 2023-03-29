@@ -42,7 +42,7 @@ public class UserRegestration {
 	        }
 	        System.out.print("Enter the Password:- ");
 	        String Password = sc.next();
-	        Pattern pattern4 = Pattern.compile("^[A-Z][a-z]{1,7}[0-9]{1}$");
+	        Pattern pattern4 = Pattern.compile("^(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{8,}$");
 	        Matcher matcher4 = pattern4.matcher(Password);
 	        if (matcher4.matches())
 	            System.out.println("valid password");
@@ -51,6 +51,8 @@ public class UserRegestration {
 	        System.out.println("Minimum 8 Characters");
 			System.out.println("Atleast 1 UpperCase");
 			System.out.println("Atleast 1 Numeric Number");
+			System.err.println("Has exactly 1 Special Character");
+
 	        }
 
 	        
