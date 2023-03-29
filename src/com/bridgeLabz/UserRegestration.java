@@ -20,6 +20,16 @@ public class UserRegestration {
 	            System.out.println("valid");
 	        else
 	            System.out.println("Invalid");
+	        System.out.print("Enter Email id:- ");
+	        String Email = sc.next();
+	        Pattern pattern3 = Pattern.compile("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$");
+	        Matcher matcher3 = pattern3.matcher(Email);
+	        if(matcher3.matches()){
+	            System.out.println("valid");
+	        }
+	        else {
+	            System.out.println("Invalid");
+	        }
 	    }
 	}
 
